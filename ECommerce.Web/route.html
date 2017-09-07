@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title>test route</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a ui-sref="hello">Hello</a></li>
+            <li><a ui-sref="about">About</a></li>
+        </ul>
+    </div>
+    <div>
+        <div ui-view=""></div>
+    </div>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-ui-router.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('myApp', ['ui.router']);
+        app.config(function ($stateProvider, $urlRouterProvider) {
+            var helloState = {
+                name: 'hello',
+                url: '/hello',
+                template: '<h3>hello world!</h3>'
+            }
+
+            var aboutState = {
+                name: 'about',
+                url: '/about',
+                template: '<h3>Its the UI-Router hello world app!</h3>'
+            }
+
+            $stateProvider.state(helloState);
+            $stateProvider.state(aboutState);
+            
+        });
+    </script>
+</body>
+</html>

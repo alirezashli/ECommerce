@@ -1,0 +1,25 @@
+﻿<div ng-controller="ordersController as orderCtrl">
+    <h2>{{orderCtrl.title}}</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Order Id</th>
+                        <th>Customer</th>
+                        <th>Shipper City</th>
+                        <th>Is Shipped</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="order in orderCtrl.orderlist">
+                        <td>{{order.orderID}}</td>
+                        <td>{{order.customerName}}</td>
+                        <td>{{order.shipperCity}}</td>
+                        <td><input type="checkbox" checked="{{order.isShipped}}" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
