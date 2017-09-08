@@ -14,7 +14,7 @@
                 $location.path('/orders');
             },
                 function (err) {
-                $scope.message = err.error_description;
+                $scope.message = err.data.error_description;
             });
         };
 

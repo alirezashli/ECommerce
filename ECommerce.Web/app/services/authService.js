@@ -31,12 +31,12 @@
             var deferred = $q.defer();
 
             $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
-                .then(function successCallback(response) {
-                    localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName });
+                .then(function (response) {
+                    localStorageService.set('authorizationData', { token: response.data.access_token, userName: loginData.userName });
                     _authentication.isAuth = true;
                     _authentication.userName = loginData.userName;
                     deferred.resolve(response);
-                }, function errorCallback(err) {
+                }, function (err, status) {
                     _logOut();
                     deferred.reject(err);
                 });
