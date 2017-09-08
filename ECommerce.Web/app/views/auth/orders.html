@@ -16,7 +16,7 @@
                         <td>{{order.orderID}}</td>
                         <td>{{order.customerName}}</td>
                         <td>{{order.shipperCity}}</td>
-                        <td><input type="checkbox" checked="{{order.isShipped}}" /></td>
+                        <td><input type="checkbox" ng-checked="{{order.isShipped}}" readonly="readonly" /></td>
                     </tr>
                 </tbody>
             </table>

@@ -1,13 +1,11 @@
-﻿using ECommerce.API.Models;
-using ECommerce.API.Repositories;
-using Microsoft.AspNet.Identity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using ECommerce.API.ViewModels;
+using ECommerce.API.Repositories;
+using Microsoft.AspNet.Identity;
 
 namespace ECommerce.API.Controllers
 {

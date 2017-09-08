@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ECommerce.API.Models
+namespace ECommerce.API.ViewModels
 {
 
     public class Order
