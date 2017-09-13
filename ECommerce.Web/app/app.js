@@ -41,6 +41,12 @@
         $stateProvider.state(aboutState);
         $urlRouterProvider.otherwise("/home");
     });
+
+    app.constant('ngAuthSettings', {
+        apiServiceBaseUri: 'http://localhost:51951/',
+        clientId: 'eCommApp'
+    });
+
     app.config(function ($httpProvider) {
         $httpProvider.interceptors.push('authInterceptorService');
     });
